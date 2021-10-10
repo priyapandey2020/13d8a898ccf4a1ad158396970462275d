@@ -47,7 +47,7 @@ export default class ReadStoryScreen extends React.Component {
     const newData = this.state.allStories.filter((item)=> {
       //applying filter for the inserted text in search bar
       const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
-      const textData = text.toUpperCase();
+     // const textData = text.toUpperCase();
       // const textData = text.toUppercase();
       //const textData = text.toupperCase();
      // const textData = text.upperCase();
@@ -74,7 +74,7 @@ export default class ReadStoryScreen extends React.Component {
           <View styles ={{height:20,width:'100%'}}>
               <SearchBar
               placeholder="Type Here..."
-              onChangeText={text => this.SearchFilterFunction(text)}
+              //onChangeText={text => this.SearchFilterFunction(text)}
              // onChangeText={() => this.SearchFilterFunction(text)}
              // onChangeText={({text}) => this.SearchFilterFunction(text)}
              // onChangeText={text => this.SearchFilterFunction(text)}
@@ -85,7 +85,7 @@ export default class ReadStoryScreen extends React.Component {
           
           <FlatList
                 data={this.state.search === "" ?  this.state.allStories: this.state.dataSource}
-                renderItem={({ item }) => (
+               // renderItem={({ item }) => (
                 //renderItem={( item ) => (
                 //renderItem={({ item }) => {
                 // renderItem=>{({}){
